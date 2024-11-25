@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julequiz</title>
+    <link rel="stylesheet" href="sporsmal.css">
+</head>
+<body>
+    <header>
+        <h1>🎄 Julequiz 🎅</h1>
+        <h2 id="score-display">Poeng: 0</h2>
+    </header>
+
+    <main>
+        <!-- Quiz Sections -->
+        <section class="quiz-container active" id="quiz-1">
+            <p class="question">Hva heter julenissen på svensk?</p>
+            <div class="options" role="group" aria-labelledby="question-1">
+                <button onclick="checkAnswer(this, 'Jultomten', 'quiz-2')">Jultomten</button>
+                <button onclick="checkAnswer(this, 'Jultomten', 'quiz-2')">Julfar</button>
+                <button onclick="checkAnswer(this, 'Jultomten', 'quiz-2')">Nissefar</button>
+                <button onclick="checkAnswer(this, 'Jultomten', 'quiz-2')">Julemannen</button>
+            </div>
+            <p class="result"></p>
+        </section>
+
+         <!-- Spørsmål 2 -->
+         <div class="quiz-container" id="quiz-2">
+            <div class="question">Hvilken dato feirer vi første juledag?</div>
+            <div class="options">
+                <button onclick="checkAnswer(this, '25. desember', 'quiz-3')">23. desember</button>
+                <button onclick="checkAnswer(this, '25. desember', 'quiz-3')">24. desember</button>
+                <button onclick="checkAnswer(this, '25. desember', 'quiz-3')">25. desember</button>
+                <button onclick="checkAnswer(this, '25. desember', 'quiz-3')">26. desember</button>
+            </div>
+            <div class="result"></div>
+        </div>
+
+        <!-- Spørsmål 3 -->
+        <div class="quiz-container" id="quiz-3">
+            <div class="question">Hvilket land regnes som opprinnelsen til julepynte-treet?</div>
+            <div class="options">
+                <button onclick="checkAnswer(this, 'Tyskland', 'quiz-4')">Tyskland</button>
+                <button onclick="checkAnswer(this, 'Tyskland', 'quiz-4')">Norge</button>
+                <button onclick="checkAnswer(this, 'Tyskland', 'quiz-4')">England</button>
+                <button onclick="checkAnswer(this, 'Tyskland', 'quiz-4')">Frankrike</button>
+            </div>
+            <div class="result"></div>
+        </div>
+
+        <!-- Spørsmål 4 -->
+        <div class="quiz-container" id="quiz-4">
+            <div class="question">Hva feires den 13. desember?</div>
+            <div class="options">
+                <button onclick="checkAnswer(this, 'Sankta Lucia', 'quiz-5')">Julebukk</button>
+                <button onclick="checkAnswer(this, 'Sankta Lucia', 'quiz-5')">Sankta Lucia</button>
+                <button onclick="checkAnswer(this, 'Sankta Lucia', 'quiz-5')">Adventsøndag</button>
+                <button onclick="checkAnswer(this, 'Sankta Lucia', 'quiz-5')">Vintersolverv</button>
+            </div>
+            <div class="result"></div>
+        </div>
+
+        <!-- Spørsmål 5 -->
+        <div class="quiz-container" id="quiz-5">
+            <div class="question">Hvilken farge har blomsten julestjerne som tradisjonelt brukes som pynt?</div>
+            <div class="options">
+                <button onclick="checkAnswer(this, 'Rød', 'quiz-6')">Rød</button>
+                <button onclick="checkAnswer(this, 'Rød', 'quiz-6')">Hvit</button>
+                <button onclick="checkAnswer(this, 'Rød', 'quiz-6')">Grønn</button>
+                <button onclick="checkAnswer(this, 'Rød', 'quiz-6')">Lilla</button>
+            </div>
+            <div class="result"></div>
+        </div>
+
+        <!-- Spørsmål 6 -->
+        <div class="quiz-container" id="quiz-6">
+            <div class="question">Hva kalles risengrynsgrøt med mandel i som serveres på julaften?</div>
+            <div class="options">
+                <button onclick="checkAnswer(this, 'Riskrem', 'end')">Riskrem</button>
+                <button onclick="checkAnswer(this, 'Riskrem', 'end')">Grøt med melk</button>
+                <button onclick="checkAnswer(this, 'Riskrem', 'end')">Risalamande</button>
+                <button onclick="checkAnswer(this, 'Riskrem', 'end')">Julegrøt</button>
+            </div>
+            <div class="result"></div>
+        </div>
+
+        <section class="quiz-container" id="end">
+            <p class="question"></p>
+            <div id="gift-container"></div>
+        </section>
+    </main>
+    <script src="sporsmal.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-image: url(./bilder/julerom.jpg);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1 {
+    color: #FFFFFF; /* White for contrast */
+    background-color: #F7DC6F; /* Softer gold */
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+header h2 {
+    margin: 10px 0;
+    color: #2ECC71; /* Brighter green */
+}
+
+.quiz-container {
+    background: #F4A460; /* Sandy brown for warmth */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    display: none;
+}
+.quiz-container.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Question and Options */
+.question {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.options button {
+    padding: 10px;
+    border: none;
+    background: #27AE60; /* Green */
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+.options button:hover {
+    background: #2ECC71;
+    transform: scale(1.05);
+}
+.result {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.correct {
+    color: #27AE60;
+}
+.incorrect {
+    color: #C0392B;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .question {
+        font-size: 1rem;
+    }
+    .options {
+        grid-template-columns: 1fr;
+    }
+}

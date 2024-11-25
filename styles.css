@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #ffffff;
+    --text-color: #000000;
+    --hover-background: #ffffff97;
+    --button-border-radius: 5px;
+    --button-padding: 10px 20px;
+    --transition-time: 0.3s;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#background-default {
+    background-image: url("./bilder/dora.jpg");
+}
+
+#spørsmålen_1 {
+    text-align: center;
+    color: var(--primary-color);
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+    margin: 30px 0;
+    padding: 20px;
+    width: min(600px, 90%); 
+}
+
+#button-container button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--button-padding);
+    font-size: 1rem;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    transition: all var(--transition-time) ease-in-out;
+}
+
+#button-container button:hover {
+    background-color: var(--hover-background);
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #spørsmålen_1 {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    #button-container button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
